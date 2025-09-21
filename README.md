@@ -29,6 +29,13 @@ fast_api/
 ```
 
 Migration:
-Create: alembic revision -m "create coupons table"
-Update: alembic upgrade head
-Downgrade: alembic downgrade -1
+```
+# Create: 
+alembic revision -m "create coupons table"
+
+# Update: 
+alembic upgrade head
+
+# Downgrade: 
+alembic downgrade -1
+```
