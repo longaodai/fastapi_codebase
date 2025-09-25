@@ -1,6 +1,8 @@
 # FastAPI Codebase
 
-A REST API built with FastAPI, MySQL, and Alembic for coupon management system.
+This repository provides a production-ready FastAPI codebase following Repository Pattern principles.  
+It includes centralized exception handling, modular API versioning, Redis integration, and Docker support for seamless deployment.  
+Perfect as a scalable starting point for building modern backend services with Python.
 
 ## Tech Stack
 
