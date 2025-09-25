@@ -1,6 +1,5 @@
-from datetime import datetime
 from sqlalchemy import Column, Integer, String, DateTime, SmallInteger, func
-from app.core.database import BaseModel
+from core.database import BaseModel
 
 
 class Coupon(BaseModel):

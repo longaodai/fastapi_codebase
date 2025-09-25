@@ -1,7 +1,7 @@
 import json
 from typing import Any, Optional
 
-from app.core.redis import redis_client
+from core.redis import redis_client
 
 
 class RedisCache:

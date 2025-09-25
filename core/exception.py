@@ -2,7 +2,7 @@ from fastapi import Request, HTTPException
 from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
 
-from app.core.response import ResponseError
+from core.response import ResponseError
 from app.enums.error_code_enum import ErrorCodeEnum
 
 

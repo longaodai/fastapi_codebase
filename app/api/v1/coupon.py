@@ -1,9 +1,11 @@
 from fastapi import APIRouter, Depends, HTTPException
+
+from core.dependence import get_coupon_service
+from core.response import ResponseSuccess, ResponseError
+
 from app.services.coupon_service import CouponService
 from app.schemas.coupon_schema import CouponValidateRequest, CouponValidateResponse
-from app.core.response import ResponseSuccess, ResponseError
 from app.enums.error_code_enum import ErrorCodeEnum
-from app.core.dependence import get_coupon_service
 
 router = APIRouter(
     prefix="/coupons",
@@ -29,4 +31,3 @@ async def validate(request: CouponValidateRequest, service: CouponService = Depe
     return ResponseSuccess(
         data=CouponValidateResponse.model_validate(coupon)
     )
-
