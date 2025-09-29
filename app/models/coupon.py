@@ -10,7 +10,3 @@ class Coupon(BaseModel):
     type = Column(SmallInteger, nullable=False)
     value = Column(Integer, nullable=False)
     expiry_date = Column(DateTime, nullable=True)
-
-    created_at = Column(DateTime(timezone=True), server_default=func.now())
-    updated_at = Column(DateTime(timezone=True), server_default=func.now(), server_onupdate=func.now())
-    deleted_at = Column(DateTime, nullable=True)

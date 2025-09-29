@@ -12,8 +12,11 @@ class BaseRepository():
     def create(self, schema: Any) -> ModelType:
         obj = self.model(**schema.dict())
         self.db_session.add(obj)
-        self.db_session.commit()
-        self.db_session.refresh(obj)
+        try:
+            self.db_session.commit()
+            self.db_session.refresh(obj)
+        except Exception:
+            self.db_session.rollback()
         return obj
 
     def read_by_id(self, id: int) -> Optional[ModelType]:
